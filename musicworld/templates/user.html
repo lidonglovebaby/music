@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>MusicWorld</title> 
+	
+	<link rel="stylesheet" href="http://s.luoo.net/css/essay.css?v2.3.1">
+
+</head>
+<body>
+		
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+			<a href="http://localhost:8000/musicworld/index" class="logo">
+				<img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+			</a>
+			<div class="nav">
+				<ul class="clearfix">
+					<li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+					<li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+					<li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+					<li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>			
+
+				</ul>
+
+			</div>
+			
+				<div class="head-search">
+					<form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+						<input type="text" class="search-input" name="q" autocomplete="off">
+						<button class="search-btn" type="submit">
+							<span class="icon-search"></span>
+						</button>
+					</form>
+				</div>			<!-- logged-in-wrapper -->
+			<div>
+<div class="logged-out-wrapper">
+
+
+
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+</head> 
+<body> 
+<ul id="navigation"> 
+<li onMouseOver="displaySubMenu(this)" onMouseOut="hideSubMenu(this)"> 
+<a href="#">Welcome {{username}}!</a> 
+<ul> 
+<li><a href="#">Edit Profile</a></li> 
+<li><a href="/musicworld/login">Sign out</a></li> 
+</ul>         
+</div>
+ </a>		
+</div>
+</div>
+
+			
+	</div>
+	
+	<!--/// header end -->	
+	<!-- container start -->
+	<div class="container index-ct">	
+		
+		<!--/// section end -->
+		
+				
+<div class="uc-head clearfix">
+	<div class="avatar-wrapper" id="avatarEditWrapper">
+		<img src="http://img2.luoo.net/pics/avatars/u566581_1420407382.jpg_128x128.jpg" alt="ice_flower_" class="avatar">
+		<a href="javascript:;" rel="nofollow" class="ln-edit-avatar" id="lnEditAvatar">Change photo</a>	
+	</div>
+	<div class="uinfo">
+		<div class="clearfix">
+			<h1 class="uname">ice_flower_</h1>
+			<p class="join">{{info.timestamp}} Joined</p>
+	</div>
+</div>
+
+	<div class="ainfo">
+		<span class="playcnt">Emain:{{info.email}}</span>
+		<span class="playcnt">hobby:{{info.hobby}}</span>
+
+	</div>
+</div>
+{% if info %}
+		{% endif %}	
+
+		
+			<div class="section-head clearfix">
+				<h3><span class="section-head-label"></span></h3>
+			</div>
+
+
+
+
+	
+
+																		
+	<!--/// container end -->
+	
+</body>
+</html>

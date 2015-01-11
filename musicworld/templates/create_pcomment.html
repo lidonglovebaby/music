@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>{{periodical.name}}</title>
+	<meta name="description" content="如果说这样“无聊”的乐队有什么特别之处，恐怕就是它有一位“蠢萌”的摇滚女主唱——余猫汤。">
+	<meta name="keywords" content="米特夏克,Meatsucks,余猫汤">
+	<link rel="stylesheet" href="http://s.luoo.net/css/essay.css?v2.3.1">
+	<link type="image/x-icon" href="http://www.luoo.net/favicon.ico" rel="shortcut icon">
+	<script src="http://s.luoo.net/thirdparty/jquery/jquery-1.11.0.min.js?v2.3.1"></script>
+<link rel="stylesheet" href="index.css">
+	<script src="http://s.luoo.net/js/luoo.js?v2.3.1"></script>
+	<script>
+	    if( $.luoo.browser()['ie'] && $.luoo.browser()['version'] < 8 )
+	    {
+	    	window.location.href = 'http://www.luoo.net/browser_not_supported/';
+	    }
+	</script></head>
+<body>
+
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+			<a href="http://www.luoo.net" class="logo">
+				<span class="icon-logo"></span>
+				落网
+			</a>
+			<div class="nav">
+				<ul class="clearfix">
+					<li>
+						<a href="/musicworld/">Home</a>
+					</li>
+					<li>
+						<a href="/musicworld/periodical/">Periodicals</a>
+					</li>
+					<li>
+						<a href="/musicworld/article/">Artcles</a>
+					</li>
+					<li>
+						<a href="http://www.luoo.net/event/">Videos</a>
+					</li>
+					<li>
+						<a href="http://www.luoo.net/app/">Contact</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="head-search">
+				<form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+					<input type="text" class="search-input" name="q" autocomplete="off">
+					<button class="search-btn" type="submit">
+						<span class="icon-search"></span>
+					</button>
+				</form>
+			</div>
+			<!-- logged-in-wrapper -->
+			<div class="logged-in-wrapper" id="loggedInWrapper"></div>
+			<!-- logged-in-wrapper end-->
+
+			<div class="logged-out-wrapper" id="loggedOutWrapper" data-remote="http://www.luoo.net/login/dialog" data-tipid="headLoginDialog" data-width="235" data-show="mouseenter" data-adjusty="-12">
+				<a href="javascript:;" rel="nofollow" class="ln-top-login">Register/Signup</a>
+
+			</div>
+			<!-- logged-out-wrapper -->
+		</div>
+	</div>
+	<!--/// header end -->
+	<!-- container start -->
+	<div class="container ct-sm">
+		<nav class="article-nav">
+			<a href="/musicworld" class="nav-back "> <i class="icon-back "></i>
+				<p class="btn btn-positive rounded">Return to index</p>
+			</a>
+		</nav>
+		<div class="essay-detail-wrapper">
+			<br><br><br>
+			</div>
+
+			<div class="essay-content">
+				<p >
+					<img alt="" src="/media/{{ periodical.image}}" style="height:382px; width:620px" />
+				</p>
+
+				<p>&nbsp;</p>
+
+				<p>{{periodical.content}}</p>
+
+				<p>&nbsp;</p>
+
+				<div >
+					<form action="/musicworld/{{periodical.id}}/createpcomment/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <ul>
+    	{{form.as_ul}}
+    </ul>
+    	
+    <input type="submit" value="submit" value="create pcomment" />
+</form>
+				</div>
+				<div class="comment-list" id="commentList"></div>
+			</div>
+			<!--/// comment-wrapper end -->
+		</div>
+		<!--/// container end -->
+		<div class="footer">
+			<div class="foot-ct clearfix">
+				<div class="about-wrapper">
+					<h4 class="foot-item-head">关于</h4>
+					<p>
+						<a class="ln-about" href="http://www.luoo.net/about/">关于落网</a>
+					</p>
+					<p>
+						<a class="ln-about" href="http://www.luoo.net/jobs/">加入我们</a>
+					</p>
+					<p>
+						<a class="ln-about" href="http://www.luoo.net/contact/">联系合作</a>
+					</p>
+					<p>
+						<a class="ln-about" href="javascript:;" id="feedback">反馈建议</a>
+					</p>
+					<p>
+						<a class="ln-about" href="http://www.luoo.net/links/">友情链接</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+</body>
+	</html>

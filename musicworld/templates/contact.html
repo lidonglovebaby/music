@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="qc:admins" content="4553322067645776654" />
+    <meta name="baidu-site-verification" content="xC1m9aYTgX" />
+    <title>Music</title> 
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="image/x-icon" href="http://www.luoo.net/favicon.ico" rel="shortcut icon">   
+    <script src="http://s.luoo.net/thirdparty/jquery/jquery-1.11.0.min.js?v2.3.1"></script>
+    
+        <script src="http://s.luoo.net/js/luoo.js?v2.3.1"></script>
+            <script>
+        if( $.luoo.browser()['ie'] && $.luoo.browser()['version'] < 8 )
+        {
+            window.location.href = 'http://www.luoo.net/browser_not_supported/';
+        }
+    </script>
+</head>
+<body>
+        
+    <!-- header start -->
+    <div class="header">
+        <div class="header-ct">
+            <a href="http://localhost:8000/musicworld/" class="logo">
+                <img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+            </a>
+            <div class="nav">
+                <ul class="clearfix">
+                  <li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+                    <li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+                    <li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+                    <li><a href="#">Contact</a></li>          
+
+                </ul>
+
+            </div>
+            
+                <div class="head-search">
+                    <form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+                        <input type="text" class="search-input" name="q" autocomplete="off">
+                        <button class="search-btn" type="submit">
+                            <span class="icon-search"></span>
+                        </button>
+                    </form>
+                </div>          <!-- logged-in-wrapper -->
+            <div>
+
+
+    <div class="col-2">
+        <h2>Contact Us</h2>
+        <form action="" id="form1">
+           
+                <label>Your Name:<input type="text"></label>
+                <label>Your E-mail:<input type="email"></label>
+                <label>Your City:<input type="text"></label>
+                <label class="msg">Your Message:<textarea></textarea></label>
+                <div class="btns"><a href="javascript:document.getElementById('form1').reset()" class="more">Clear</a><input type="button" class="more" onClick="send()" value="send"></a></div>
+          
+        </form>
+    </div>
+<script type="text/javascript">
+function send(){
+    a= document.getElementById('form1');
+    if(a==0)
+        alert("Please fill in the form");
+location.href="#";
+else
+    alert("Information sent successfully!");
+location.href="http://localhost:8000/musicworld/index";
+ }
+</script>
+    
+    <!--/// header end -->  
+
+        
+        <!--/// section end -->
+        
+                
+
+
+                                                                        
+    <!--/// container end -->
+
+</body>
+</html>

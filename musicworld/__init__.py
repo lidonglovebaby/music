@@ -1,0 +1,1 @@
+#django created this file when we created this application in our project

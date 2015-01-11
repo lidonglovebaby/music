@@ -1,0 +1,23 @@
+
+#content {min-height:400px;padding:43px 0 60px 0;overflow:hidden;font-size:12px;line-height:20px;color:#fff;position:relative}
+.contacts span {width:70px;display:inline-block}
+h2 {font:30px/1.2em Arial, Helvetica, sans-serif;color:#fff;margin-bottom:16px}
+table.dates {width:586px;font:12px/20px Arial, Helvetica, sans-serif;color:#fff}
+.table-border {border-radius:8px;overflow:hidden;border:none;position:relative;z-index:10}
+table.dates .thead td {color:#898989;padding:0 20px}
+table.dates .thead td.col1 {padding-left:40px}
+table.dates td {padding:20px 22px;background:#171717}
+table.dates td .name {font:20px/32px Arial, Helvetica, sans-serif;color:#74be00;white-space:nowrap;text-decoration:none;display:inline-block;margin-bottom:4px}
+table.dates td .name:hover {color:#fff}
+table.dates .even td {background:#0e0e0e}
+table.dates .thead td {background:#171717;line-height:40px}
+table.dates .col1 {width:240px;padding-left:40px}
+
+
+#form1 {width:550px}
+#form1 label {float:left;width:100%;background:url(../images/contacts-input.png) right 0 no-repeat;margin-bottom:10px}
+#form1 label.msg {background-image:url(../images/contacts-textarea.png)}
+#form1 label.msg textarea {height:500px;}
+#form1 label input,#form1 label textarea {float:right;width:400px;background:none;border:none;padding:8px 8px}
+#form1 .btns {float:right;padding-top:0px}
+#form1 .btns a {float:left;margin-left:15px}

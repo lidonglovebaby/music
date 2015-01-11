@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>Music</title> 
+	<link rel="stylesheet" href="/static/css/index.css">
+	<link type="image/x-icon" href="http://www.luoo.net/favicon.ico" rel="shortcut icon">	
+	<script src="http://s.luoo.net/thirdparty/jquery/jquery-1.11.0.min.js?v2.3.1"></script>
+	
+		<script src="http://s.luoo.net/js/luoo.js?v2.3.1"></script>
+			<script>
+	    if( $.luoo.browser()['ie'] && $.luoo.browser()['version'] < 8 )
+	    {
+	    	window.location.href = 'http://www.luoo.net/browser_not_supported/';
+	    }
+	</script>
+
+<style>
+body { 
+font-family:verdana, sans-serif; 
+font-size:small; 
+} 
+
+#navigation, #navigation li ul { 
+list-style-type:none; 
+} 
+#navigation { 
+
+ position: absolute;
+    right: 15px;
+    top: 5px;
+} 
+#navigation li { 
+float:left; 
+text-align:center; 
+position:relative; 
+} 
+#navigation li a:link, #navigation li a:visited { 
+display:block; 
+text-decoration:none; 
+color:#000; 
+width:120px; 
+height:40px; 
+line-height:40px; 
+border:1px solid #fff; 
+border-width:0px 0px 0 0; 
+background:transparent; 
+padding-left:10px; 
+} 
+#navigation li a:hover { 
+color:#fff; 
+background:#2687eb; 
+} 
+#navigation li ul li a:hover { 
+color:#fff; 
+background:#6b839c; 
+} 
+#navigation li ul { 
+display:none; 
+position:absolute; 
+top:40px; 
+left:0; 
+margin-top:1px; 
+width:120px; 
+} 
+#navigation li ul li ul { 
+display:none; 
+position:absolute; 
+top:0px; 
+left:130px; 
+margin-top:0; 
+margin-left:1px; 
+width:120px; 
+} 
+</style>
+</head>
+
+
+<body>
+		
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+			<a href="/musicworld/index" class="logo">
+				<img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+			</a>
+			<div class="nav">
+				<ul class="clearfix">
+					<li><a href="/musicworld/periodical">Periodicals</a></li>
+					<li><a href="/musicworld/article">Articles</a></li>
+					<li><a href="/musicworld/video">Videos</a></li>
+					<li><a href="/musicworld/contact">Contact</a></li>			
+
+				</ul>
+
+			</div>
+			
+				<div class="head-search">
+					<form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+						<input type="text" class="search-input" name="q" autocomplete="off">
+						<button class="search-btn" type="submit">
+							<span class="icon-search"></span>
+						</button>
+					</form>
+				</div>			<!-- logged-in-wrapper -->
+			<div>
+<div class="logged-out-wrapper">
+
+
+
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+</head> 
+ <body>
+<ul id="navigation"> 
+<li onMouseOver="displaySubMenu(this)" onMouseOut="hideSubMenu(this)"> 
+<a href="#">Welcome,{{username}}!</a> 
+<ul> 
+<li><a href="/musicworld/user">Edit Profile</a></li> 
+<li><a href="/musicworld/login">Sign out</a></li> 
+</ul>         
+</div>
+ </a>		
+</div>
+</div>
+
+			
+	</div>
+	
+	<!--/// header end -->	<!-- container start -->
+	<div class="container index-ct">	
+		
+			
+		<div class="section-vol">
+			<div class="section-head clearfix">
+				<h3><span class="section-head-label"></span>Periodical</h3>
+				
+			</div>
+		
+			<div class="section-ct clearfix">
+				{% if a %}
+				<div class="vol-item-lg">
+					<a href="{% url 'musicworld:pdetail' a.id %}" class="cover-wrapper cover-wrapper-lg">
+						<img src="http://localhost:8000/media/{{a.image}}"  class="cover-lg rounded">
+						<span class="icon-play-lg"></span>
+						<div class="play-btn-mask"></div>
+					</a>
+
+					<a href="{% url 'musicworld:pdetail' a.id %}" class="title">vol.{{a.name}}</a>
+				</div>
+				{% endif %}
+				{% if b %}
+					<div class="vol-item">
+						<a href="{% url 'musicworld:pdetail' b.id %}" class="cover-wrapper">
+							<img src="http://localhost:8000/media/{{b.image}}"  class="cover rounded">
+							<span class="icon-play"></span>
+							<div class="play-btn-mask"></div>
+						</a>
+
+						<a class="title" href="{% url 'musicworld:pdetail' b.id %}">vol.{{b.name}}</a>
+					</div>
+				{% endif %}	
+				{% if c %}	
+					<div class="vol-item">
+						<a href="{% url 'musicworld:pdetail' c.id %}" class="cover-wrapper">
+							<img src="/media/{{c.image}}"  class="cover rounded">
+							<span class="icon-play"></span>
+							<div class="play-btn-mask"></div>
+						</a>
+
+						<a class="title" href="{% url 'musicworld:pdetail' c.id %}">vol.{{c.name}}</a>
+					</div>
+				{% endif %}
+								</div>
+		</div>
+		<!--/// section end -->
+		
+				
+
+		<div class="section-m clearfix">
+			<div class="section-musician">
+				<div class="section-head clearfix">
+					<h3><span class="section-head-label"></span>Original Recommendation</h3>
+				</div>
+				{% if d %}
+				<div class="section-ct">
+					<div class="clearfix">
+						<img src="http://images.sodahead.com/polls/000426079/polls_int_music_1703_560352_answer_1_xlarge.jpeg" class="cover rounded">
+						<div class="title">
+							<div class="align-fix">
+								<div>
+									<a href="" class="single-name">Music</a>
+									<p class="artist">LC</p>
+									<p class="pubdate">2014-01-04</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="remark">
+						<span class="quote-before"></span> <span>For years I’ve been raving about my great fiery love for this band to pretty much anyone who would listen, and so to see them enjoy such success this year has been a thing of enormous joy for me. I’m not sure they sit so neatly in the Americana bracket, but they’re from Baltimore and I adore them, so I’m claiming them as my own. This of course is the single, and the Letterman performance, that first turned heads back in March. Much has been made of Samuel T Herring as frontman – the bullish frame, the dancing, the ferocity, but behind the impeccable showmanship there lies something incredibly special – music that is heartfelt and guttural and true.</span> <span class="quote-after"></span> 
+					</div>
+				</div>
+				{% endif %}
+			</div>
+			<!-- /// section-musician end -->
+
+			<div class="section-essay">
+				<div class="section-head clearfix">		
+				</div>
+				<div class="section-ct clearfix">
+					    {% if latest_article_list %}
+					    {% for article in latest_article_list %}
+						<div class="essay-item">
+							<a href="{% url 'musicworld:adetail' article.id %}" class="cover-wrapper">
+								<img src="/media/{{article.articleimage}}" class="cover rounded">
+							</a>
+							<div class="meta rounded">
+								<p class="title"><a class="ln-title" href="{% url 'musicworld:adetail' article.id %}" title="The Beatles">{{article.name}}</a></p>
+								<p class="author">Posted by:{{article.author}}</p>
+								<p class="author">Posted on:{{article.timestamp}}</p>
+							</div>
+						</div>
+						{% endfor %}
+						{% endif %}
+						
+										</div>
+			</div>
+		</div>
+		<!-- /// section end -->
+			
+
+		
+			<div class="section-head clearfix">
+				<h3><span class="section-head-label"></span>Hot Video</h3>
+			</div>
+
+
+
+
+<div >
+<iframe class="movie1" width="460" height="315" src="http://www.youtube.com/embed/QHxzs6YEqk8" frameborder="0" allowfullscreen></iframe></div>
+<div>
+<iframe class="movie1_relative" width="460" height="315" src="http://www.youtube.com/embed/bESGLojNYSo" frameborder="0" allowfullscreen></iframe>
+</div>	
+	
+
+																		
+	<!--/// container end -->
+<div class="footer">
+		<div id="footer-inner">
+			<span class="alignleft">&copy; <a href="http://workingstorage.com/">www.music.com</a>. </span>
+			<span class="alignright">
+				 Powered by Music
+				&nbsp;|&nbsp;
+				Website Designed by Group B		</span>
+			<div class="clearfix"></div>
+		</div><!-- #footer-inner -->
+	</div><!-- #footer -->
+</body>
+</html>

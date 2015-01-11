@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>Musicworld</title>
+	<link rel="stylesheet" href="http://s.luoo.net/css/essay.css?v2.3.1">
+	<link type="image/x-icon" href="http://www.luoo.net/favicon.ico" rel="shortcut icon">
+	<script src="http://s.luoo.net/thirdparty/jquery/jquery-1.11.0.min.js?v2.3.1"></script>
+
+	<script src="http://s.luoo.net/js/luoo.js?v2.3.1"></script>
+	<script>
+	    if( $.luoo.browser()['ie'] && $.luoo.browser()['version'] < 8 )
+	    {
+	    	window.location.href = 'http://www.luoo.net/browser_not_supported/';
+	    }
+	</script></head>
+<body>
+
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+            <a href="/musicworld/index" class="logo">
+                <img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+            </a>
+            <div class="nav">
+                <ul class="clearfix">
+                    <li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+                    <li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+                    <li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+                    <li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>         
+
+                </ul>
+
+            </div>
+            
+                <div class="head-search">
+                    <form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+                        <input type="text" class="search-input" name="q" autocomplete="off">
+                        <button class="search-btn" type="submit">
+                            <span class="icon-search"></span>
+                        </button>
+                    </form>
+                </div>          <!-- logged-in-wrapper -->
+            <div>
+			
+		</div>
+	</div>
+	<!--/// header end -->
+	<!-- container start -->
+	<div class="container ct-sm">
+		<nav class="article-nav">
+			<a href="/musicworld/article" class="nav-back "> <i class="icon-back "></i>
+				<p class="btn btn-positive rounded">Return to index</p>
+			</a>
+		</nav>
+		<div class="essay-detail-wrapper">
+			<br><br><br>
+			</div>
+
+			<div class="essay-content">
+				
+
+				<p>&nbsp;</p>
+
+				<div >
+					<form action="/musicworld/article/create/" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<table>
+							{{form.as_table}}
+						</table>
+
+						<input class="btn btn-positive rounded" type="submit" value="submit"/>
+					</form>
+				</div>
+				<div class="comment-list" id="commentList"></div>
+			</div>
+			<!--/// comment-wrapper end -->
+		</div>
+		<!--/// container end -->
+		<div class="footer">
+	<div class="foot-ct clearfix">
+		<div class="about-wrapper">
+			<h3 class="foot-item-head">created by group b</h3>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+	</html>

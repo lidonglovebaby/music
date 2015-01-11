@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>MusicWorld</title> 
+	
+	<link rel="stylesheet" href="/static/css/essay.css">
+
+</head>
+<body>
+		
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+			<a href="http://localhost:8000/musicworld/index" class="logo">
+				<img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+			</a>
+			<div class="nav">
+				<ul class="clearfix">
+					<li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+					<li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+					<li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+					<li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>			
+
+				</ul>
+
+			</div>
+			
+				<div class="head-search">
+					<form class="search-form" action="/" id="headSearchForm">
+						<input type="text" class="search-input" name="q" autocomplete="off">
+						<button class="search-btn" type="submit">
+							<span class="icon-search"></span>
+						</button>
+					</form>
+				</div>			<!-- logged-in-wrapper -->
+			<div>
+<div class="logged-out-wrapper">
+
+
+
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+</head> 
+<body> 
+<ul id="navigation"> 
+<li onMouseOver="displaySubMenu(this)" onMouseOut="hideSubMenu(this)"> 
+<a href="#">Welcome {{username}}!</a> 
+<ul> 
+<li><a href="#">Edit Profile</a></li> 
+<li><a href="/musicworld/login">Sign out</a></li> 
+</ul>         
+</div>
+ </a>		
+</div>
+</div>
+
+			
+	</div>
+	<!--/// header end -->
+	<!-- container start -->
+	<div class="container">	
+
+		<div class="clearfix">
+
+			<!-- article start-->
+			<div class="article article-sm">
+
+				<!-- essay-list -->
+				<div class="essay-list">
+				
+
+
+
+
+
+							{% if latest_article_list %}
+								<ul>
+    						{% for article in latest_article_list %}
+    						<p>{{article.likes}}people like this article</p>
+    						
+							<div class="item">
+								<a href="" class="cover-wrapper">
+									<img class="cover rounded" src="http://localhost:8000/media/{{ article.articleimage}}" alt="">
+								</a>
+								<div class="essay-wrapper rounded">									
+									<li><a href="{% url 'musicworld:adetail' article.id %}">
+										{{ article.name}}
+									</a>
+									<div class="meta">
+										<span class="category">Posted</span><span class="separator">&#12539;</span><a class="entry-author" >{{article.author}}</a><span class="separator">&#12539;</span><span class="time">{{ article.timestamp}}</span>
+									</div>
+									<div class="subscribe">
+										{{ article.content}}
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+   								 </ul>
+							{% else %}
+    						<p>No polls are available.</p>
+						{% endif %}
+							
+							
+				</div>
+				<!--/// essay-list end-->
+
+				<div class="paginator">
+					<a class="previous disabled" rel="nofollow" href="javascript:;">Previous</a><a class="page actived" rel="nofollow" href="javascript:;">1</a><a class="page">2</a><a class="page" >3</a><a class="page" >4</a><a class="page">5</a><a class="page" >6</a><a class="page" >7</a><a class="page" >8</a><a class="page">9</a><a class="page" >10</a><span class="break">...</span><a class="page">25</a><a class="next">Next</a>				</div>
+			</div>
+			<!--/// article end-->
+
+			<!-- aside start-->
+			<div class="aside">
+				
+				<div class="widget">
+					<div class="widget-head">						
+						<span class="title">Recommend</span>				
+					</div>
+
+					<div class="widget-ct pic-widget">
+					{% if recommend %}
+					{% for recommend in recommend %}
+						<div class="item">
+							<a href="{% url 'musicworld:adetail' recommend.id %}" title="" class="cover-wrapper">
+								<img src="/media/{{recommend.articleimage}}" alt="" class="cover rounded">
+							</a>
+							<div class="info">
+								<a href="{% url 'musicworld:adetail' recommend.id %}" title="" class="title">{{recommend.name}}</a>
+								<p class="description"><span>Liked</span><span class="separator">&#12539;</span>{{recommend.likes}} people</p>
+							</div>
+						</div>
+					{% endfor %}	
+					{% endif %}					
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="widget-ct">
+						<a href="/musicworld/article/create" class="ln-widget-block rounded">
+							Make Your Article
+						</a>
+					</div>
+				</div>
+
+							</div>
+			<!--/// aside end-->
+
+		</div>
+	</div>
+	<!--/// container end -->
+<script type="text/javascript">
+$(function(){
+	$('.aside')
+	.stick_in_parent({offset_top: 15})
+	.on("sticky_kit:bottom", function(e) {
+		//console.log( $(this) );
+		$(this).css({top: 0, bottom: '', position: 'fixed'})
+	});
+})
+</script>
+
+<div class="footer">
+	<div class="foot-ct clearfix">
+		<div class="about-wrapper">
+			<h3 class="foot-item-head">created by group b</h3>
+			
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

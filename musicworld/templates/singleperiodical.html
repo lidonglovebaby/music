@@ -1,0 +1,188 @@
+
+	<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta property="qc:admins" content="4553322067645776654" />
+	<meta name="baidu-site-verification" content="xC1m9aYTgX" />
+	<title>MusicWorld</title> 
+	
+	<link rel="stylesheet" href="http://s.luoo.net/css/essay.css?v2.3.1">
+
+</head>
+<body>
+		
+	<!-- header start -->
+	<div class="header">
+		<div class="header-ct">
+			<a href="http://localhost:8000/musicworld/index" class="logo">
+				<img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+			</a>
+			<div class="nav">
+				<ul class="clearfix">
+					<li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+					<li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+					<li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+					<li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>			
+
+				</ul>
+
+			</div>
+			
+				<div class="head-search">
+					<form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+						<input type="text" class="search-input" name="q" autocomplete="off">
+						<button class="search-btn" type="submit">
+							<span class="icon-search"></span>
+						</button>
+					</form>
+				</div>			<!-- logged-in-wrapper -->
+			<div>
+<div class="logged-out-wrapper">
+
+
+
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+</head> 
+<body> 
+<ul id="navigation"> 
+<li onMouseOver="displaySubMenu(this)" onMouseOut="hideSubMenu(this)"> 
+<a href="#">Welcome {{username}}!</a> 
+<ul> 
+<li><a href="#">Edit Profile</a></li> 
+<li><a href="/musicworld/login">Sign out</a></li> 
+</ul>         
+</div>
+ </a>		
+</div>
+</div>
+
+			
+	</div>
+	<!--/// header end -->
+	<div class="container ct-sm">	
+		<nav class="article-nav">
+			<a href="/musicworld/periodical" class="nav-back ">
+				<i class="icon-back "></i>
+				<p class="btn btn-positive rounded">Return to index</p>
+			</a>
+		</nav>
+		<div class="essay-detail-wrapper">	
+			<h1 class="essay-title">{{periodical.name}}</h1>
+			<p class="essay-meta">
+				<span>Posted</span>&#12539;{{periodical.timestamp}}		</p>
+			
+			
+						<audio src="/media/music/article/1_Im_Yours_vtfedXp.mp3" controls autoplay loop>
+							</audio>
+								
+			<div class="essay-content">
+				<p ><img alt="" src="/media/{{ periodical.image}}" style="height:382px; width:620px" /></p>
+
+<p>&nbsp;</p>
+
+<p>{{periodical.content}}</p>
+
+<p>&nbsp;</p>
+
+
+			
+			<!-- comment-editor end -->
+<!-- <a href="http://127.0.0.1:8000/musicworld/{{article.id}}/createcomment/">Make a Comment</a> -->
+<!-- <button class="btn btn-positive rounded" id="commentSubmit" data-tipid="commentSubmitDialog" data-remote="http://127.0.0.1:8000/musicworld/{{article.id}}/createcomment/" data-width="235">发布</button> -->
+<div>
+	<table style="width:100%">
+  <tr>
+    <td align="center" width="200px">
+    	<a href="/musicworld/likep/{{periodical.id}}" >
+    		<img src="/static/images/thumbs-up.jpg" width="35px" height="30px" alt="like">
+    	</a>
+	</td>
+    <td>
+    	<p style="color:#0099CC"><b>{{periodical.likes}}</b> people like this periodical</p>
+    </td>
+  </tr>
+  <tr>
+  	<td>
+  		<br>
+  	</td>
+  	<td>
+  		<br>
+  	</td>
+  </tr>
+  <tr>
+  	<td align="center">
+  		<a href="/musicworld/{{periodical.id}}/createpcomment/">
+  			<img src="/static/images/mkcmt.jpg"  width="35px" height="30px" alt="comment">
+  		</a>
+  	</td>
+  	<td >
+    	<p style="color:#FF6600">Click to add comments</p>
+    </td>
+  </tr>
+</table>
+<br><br>
+</div>
+
+
+			<div class="comment-sort">
+				<a class="curt-sort btn btn-positive rounded" id="commentSort" href="javascript:;">
+					<span id="commentSortText">Show comments</span>
+					<br>
+					<span class="comment-count" id="commentCount"></span> 
+					<span class="icon icon-comment-sort-menu">
+						
+					</span>
+				</a>
+				<div class="sort-menu" id="commentSortMenu">
+					<br><br>
+					<table style="width:100%">
+						{% if pcomments %}
+						{% for pcomment in pcomments %}
+						<tr >
+  								<td>
+  									
+  									{{ pcomment.content}}
+  									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  								</td>
+  								<td align="right" style="width:200px;">
+  									{{ pcomment.timestamp}}<br>
+  								</td>
+
+  						</tr>
+
+						{% endfor %}
+						{% endif %}
+					</table>
+				</div>
+			</div>	
+
+			<div class="comment-list" id="commentList">
+			</div>
+		</div>
+		<!--/// comment-wrapper end -->
+	</div>
+
+<script>
+	try{
+		var pl = "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";
+		var sid = 0;
+	}catch(e){}
+	$(function(){
+		$('#commentList')
+		.data({app:"1", id:"697", url: "http://www.luoo.net/comment/get", commid: "0"})
+		.getComments();
+	})
+</script>
+
+</body>
+</html>

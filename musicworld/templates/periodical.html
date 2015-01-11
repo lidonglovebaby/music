@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="qc:admins" content="4553322067645776654" />
+    <meta name="baidu-site-verification" content="xC1m9aYTgX" />
+    <title>Musicworld</title> 
+    <link rel="stylesheet" href="http://s.luoo.net/css/vol.css?v2.3.1">
+    <link type="image/x-icon" href="http://www.luoo.net/favicon.ico" rel="shortcut icon">   
+    <script src="http://s.luoo.net/thirdparty/jquery/jquery-1.11.0.min.js?v2.3.1"></script>
+    
+        <script src="http://s.luoo.net/js/luoo.js?v2.3.1"></script>
+            <script>
+        if( $.luoo.browser()['ie'] && $.luoo.browser()['version'] < 8 )
+        {
+            window.location.href = 'http://www.luoo.net/browser_not_supported/';
+        }
+    </script>
+
+<style>
+body { 
+font-family:verdana, sans-serif; 
+font-size:small; 
+} 
+
+#navigation, #navigation li ul { 
+list-style-type:none; 
+} 
+#navigation { 
+
+ position: absolute;
+    left: 1100px;
+    top: 5px;
+} 
+#navigation li { 
+float:left; 
+text-align:center; 
+position:relative; 
+} 
+#navigation li a:link, #navigation li a:visited { 
+display:block; 
+text-decoration:none; 
+color:#000; 
+width:120px; 
+height:40px; 
+line-height:40px; 
+border:1px solid #fff; 
+border-width:0px 0px 0 0; 
+background:transparent; 
+padding-left:10px; 
+} 
+#navigation li a:hover { 
+color:#fff; 
+background:#2687eb; 
+} 
+#navigation li ul li a:hover { 
+color:#fff; 
+background:#6b839c; 
+} 
+#navigation li ul { 
+display:none; 
+position:absolute; 
+top:40px; 
+left:0; 
+margin-top:1px; 
+width:120px; 
+} 
+#navigation li ul li ul { 
+display:none; 
+position:absolute; 
+top:0px; 
+left:130px; 
+margin-top:0; 
+margin-left:1px; 
+width:120px; 
+} 
+</style>
+</head>
+<body>
+        
+    <!-- header start -->
+    <div class="header">
+        <div class="header-ct">
+            <a href="/musicworld/index" class="logo">
+                <img src="http://4.bp.blogspot.com/-RSW7GpwPaP4/TZFMVLjAyBI/AAAAAAAAAAo/6lFZFqTm0lQ/s45/music-notes.jpg">
+            </a>
+            <div class="nav">
+                <ul class="clearfix">
+                    <li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
+                    <li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
+                    <li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
+                    <li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>         
+
+                </ul>
+
+            </div>
+            
+                <div class="head-search">
+                    <form class="search-form" action="http://www.luoo.net/search/" id="headSearchForm">
+                        <input type="text" class="search-input" name="q" autocomplete="off">
+                        <button class="search-btn" type="submit">
+                            <span class="icon-search"></span>
+                        </button>
+                    </form>
+                </div>          <!-- logged-in-wrapper -->
+            <div>
+
+
+
+
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+</head> 
+ <body>
+
+<ul id="navigation"> 
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<a href="#">Welcome,{{username}}!</a> 
+<ul> 
+<li><a href="/musicworld/user">Edit Profile</a></li> 
+<li><a href="/musicworld/login">Sign out</a></li> 
+</ul>         
+</div>
+ </a>       
+</div>
+
+
+            
+    </div>
+    <!--/// header end -->
+<!-- container start -->
+<div class="container"> 
+
+    <div class="clearfix">
+        <!-- article start-->
+        <div class="article article-sm">
+            <div class="page-nav rounded clearfix">
+                
+                <div class="curt-nav">
+                    <a class="item actived">Newest Periodicals</a>
+                </div>
+ 
+                
+                <div class="pagenav-wrapper">
+                <a href="" class="item">electronic</a><a href="" class="item">rock</a><a href="" class="item">pop</a><a href="" class="item">classic</a><a href="" class="item">electronic</a><a href="" class="item">rap</a><a href="" class="item">jazz</a>   
+                <a href="" class="item">country</a>
+                
+              
+                </div>            
+            </div>
+            <!-- vol-list -->
+            <div class="vol-list">
+                {% if latest_periodical_list %}
+                                <ul>
+                            {% for periodical in latest_periodical_list %}
+                        <div class="item">
+                            <a href="{% url 'musicworld:pdetail' periodical.id %}" class="cover-wrapper" title="">
+                                <img src="http://localhost:8000/media/{{periodical.image}}" alt="" class="cover rounded">
+                            </a>
+                            <div class="meta rounded clearfix">
+                                <a href="{% url 'musicworld:pdetail' periodical.id %}" class="name" title="">vol.{{periodical.id}} {{periodical.name}}</a>
+                                <span class="comments">
+                                    <span class="icon-comment-count"></span>
+                                    {{periodical.timestamp}}
+                                </span>
+                                <span class="favs">
+                                    <span class="icon-favd"></span>
+                                    {{periodical.likes}}
+                                </span>
+                            </div>
+                        </div>
+                {% endfor %}
+                {% endif %}       
+                        
+                        
+                        
+                                    </div>
+            <!-- vol-list end-->
+
+                <div class="paginator">
+                    <a class="previous disabled" rel="nofollow" href="javascript:;">Previous</a><a class="page actived" rel="nofollow" href="javascript:;">1</a><a class="page">2</a><a class="page" >3</a><a class="page" >4</a><a class="page">5</a><a class="page" >6</a><a class="page" >7</a><a class="page" >8</a><a class="page">9</a><a class="page" >10</a><span class="break">...</span><a class="page">25</a><a class="next">Next</a>                </div>
+            </div>
+        <!--/// article end-->
+
+        <!-- aside start-->
+        <div class="aside">
+            
+          
+            
+            <div class="widget" id="widgetHotVol">
+                <div class="widget-head">
+                    <span class="title">Popular now</span>
+                </div>
+                {% if popularp%}
+                {% for popularp in popularp %}
+                <div class="widget-ct pic-widget">
+                    
+                            <div class="item">
+                                <a href="{% url 'musicworld:pdetail' popularp.id %}" class="cover-wrapper">
+                                    <img src="/media/{{popularp.image}}" alt="" class="vol-cover rounded">
+                                </a>
+                                <div class="info">
+                                    <a href="{% url 'musicworld:pdetail' popularp.id %}" title="" class="title">{{popularp.name}}</a>
+                                    <p class="description">{{popularp.likes}}likes</p>
+                                </div>
+                            </div>
+                            
+                                                
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+
+                    </div>
+        <!--/// aside end-->
+
+    </div>
+</div>
+
+
+<!--/// container end -->
+<div class="footer">
+    <div class="foot-ct clearfix">
+        <div class="about-wrapper">
+            <h3 class="foot-item-head">created by group b</h3>
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $.luoo.init({root: 'http://www.net', url_static: 'http://snet', res: {"app":{"vol":1,"essay":2,"single":3,"users":4,"comment":5,"lyric":6,"note":7,"ios":8,"android":9,"wp":10,"event":11,"livehouse":12,"app_ad":13,"musician":14},"uid":null,"sessid":"tva4ks0im3svfmdr9ss16e6b43"}, cfg: {"auto_play":true,"aes":"b6ce159334e155d8"}});
+    $('#txtFeedbackRef').val(document.location.href);
+</script>
+
+
+
+
+</body>
+</html>
